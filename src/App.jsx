@@ -7,7 +7,7 @@ function App() {
 
 
   return (
-    <div className="app h-screen max-w-md mx-auto relative bg-primary rounded-2xl overflow-y-scroll">
+    <div className="scrollbar-width-none h-screen max-w-md mx-auto relative bg-primary rounded-2xl overflow-y-scroll">
       <Navbar />
       <div className='pt-16'>
         <Search />

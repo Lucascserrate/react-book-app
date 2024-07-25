@@ -6,6 +6,6 @@ body {
   overflow: hidden;
 }
 
-.app {
+.scrollbar-width-none {
   scrollbar-width: none;
 }
