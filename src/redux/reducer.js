@@ -1,9 +1,9 @@
-import { GET_BOOKS, GET_SEARCH } from "./actions"
+import { GET_BOOKS, GET_SEARCH, GET_BOOK } from "./actions"
 
 
 const initialState = {
     books: [],
-   
+    bookDetail: {}
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -13,6 +13,9 @@ const rootReducer = (state = initialState, action) => {
 
         case GET_SEARCH:
             return {...state, books: action.payload}
+
+        case GET_BOOK:
+            return {...state, bookDetail: action.payload}
       
         default: return state
     }

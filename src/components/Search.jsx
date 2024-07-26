@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getSearch } from '../redux/actions'
 import { useDispatch } from 'react-redux'
+import { IoSearchOutline } from "react-icons/io5";
 
 const Search = () => {
     const dispatch = useDispatch()
@@ -12,14 +13,14 @@ const Search = () => {
             dispatch(getSearch(inputValue))
         }
 
-    }, [inputValue])
+    }, [inputValue, dispatch])
 
     return (
-        <div className='px-6 pb-4'>
-            <div className='w-full bg-white p-3 rounded-xl'>
-                <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder='Search' className='w-full outline-none' />
-            </div>
+        <div className='flex items-center gap-2 w-full bg-white p-3 rounded-xl'>
+            <IoSearchOutline size={20} />
+            <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder='Search' className='w-full outline-none' />
         </div>
+
     )
 }
 

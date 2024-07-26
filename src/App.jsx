@@ -1,18 +1,13 @@
-import CardList from './components/CardList';
-import Navbar from './components/Navbar';
-import Search from './components/Search';
-
-
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home';
+import BookDetail from './pages/BookDetail';
 function App() {
-
-
   return (
-    <div className="scrollbar-width-none h-screen max-w-md mx-auto relative bg-primary rounded-2xl overflow-y-scroll">
-      <Navbar />
-      <div className='pt-16'>
-        <Search />
-        <CardList />
-      </div>
+    <div>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/:id' element={<BookDetail />} />
+      </Routes>
     </div>
   );
 }
