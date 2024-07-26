@@ -17,7 +17,7 @@ const BookDetail = () => {
     }, [])
 
     return (
-        <div className="scrollbar-width-none h-screen max-w-md mx-auto relative bg-primary rounded-2xl overflow-y-scroll">
+        <div className="scrollbar-width-none h-[98vh] mt-2 max-w-md mx-auto relative bg-primary rounded-2xl overflow-y-scroll">
             <div className='flex items-center fixed w-[448px] h-14 bg-primary/80 backdrop-blur rounded-t-2xl z-50 px-6'>
                 <Link to={'/'}>
                     <BiArrowBack size={24} />
@@ -46,9 +46,7 @@ const BookDetail = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='absolute bottom-0 left-0 bg-[#222] w-full h-40 rounded-2xl' >
-
-                        </div>
+                        <div className='absolute bottom-0 left-0 bg-[#222] w-full h-40 rounded-2xl' />
                     </div>
                     <div className='flex flex-col items-center'>
                         <div className='text-xl font-medium'>{book?.title}</div>
@@ -74,7 +72,7 @@ const BookDetail = () => {
                     <section className='flex flex-col gap-3'>
                         <div>
                             <div className='text-sm text-gray-400'>Description</div>
-                            <div className='text-lg'>{book?.description}</div>
+                            <div className='first-letter:text-3xl first-letter:font-semibold'>{book?.description}</div>
                         </div>
                     </section>
                 </div>
