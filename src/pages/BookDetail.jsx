@@ -14,7 +14,7 @@ const BookDetail = () => {
 
     useEffect(() => {
         dispatch(getBook(id))
-    }, [])
+    }, [dispatch, id])
 
     return (
         <div className="scrollbar-width-none h-[98vh] mt-2 max-w-md mx-auto relative bg-primary rounded-2xl overflow-y-scroll">
@@ -27,7 +27,7 @@ const BookDetail = () => {
                 <div className='flex flex-col items-center gap-5 px-4'>
                     <div className='w-full relative py-4'>
                         <div className='flex items-end gap-9'>
-                            <img src={book?.imageLinks?.thumbnail} className='relative left-5 w-[140px] h-[220px] rounded-xl object-cover shadow-lg z-10' alt="image" />
+                            <img src={book?.imageLinks?.thumbnail} className='relative left-5 w-[140px] h-[220px] rounded-xl object-cover shadow-lg z-10' alt="thumbnail" />
                             <div className='flex flex-col gap-2 relative z-10'>
                                 <div>
                                     <div className='text-xs text-gray-400'>Authors</div>
